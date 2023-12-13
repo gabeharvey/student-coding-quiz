@@ -1,0 +1,79 @@
+:root {
+    background-color: azure;
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 3rem;
+    font-size: 1.4rem;
+}
+
+.btn:hover {
+    text-shadow: 2px 2px 3px red;
+    color: yellow;
+}
+
+.container {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 4rem;
+    padding: 1rem;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    margin: auto;
+    padding: 1rem;
+}
+
+.btn2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 15rem;
+    background-color: red;
+    color: yellow;
+    box-shadow: 5px 5px 5px lightgray;
+    padding: 1rem;
+    font-size: 1.7rem;
+    margin: auto;
+    border: .3rem dotted yellow;
+}
+
+.btn2:hover {
+    background-color: yellow;
+    box-shadow: 5px 5px 5px lightgray;
+    border: .3rem dotted red;
+    color: red;
+}
