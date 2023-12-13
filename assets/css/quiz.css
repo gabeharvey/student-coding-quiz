@@ -57,10 +57,12 @@ ol {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    padding: 2rem;
 }
 
 ol li {
     list-style: none!important;
+    padding: .5rem;
 }
 
 .btn1 {
