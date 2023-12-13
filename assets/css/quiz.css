@@ -53,7 +53,7 @@ h2 {
     padding: 1rem;
 }
 
-.answer-container {
+.select-container {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -66,14 +66,14 @@ h2 {
     box-shadow: 0px 5px 5px lightblue;
 }
 
-.answer-container:hover {
+.select-container:hover {
     background-color: lightblue;
     box-shadow: 0px 5px 5px royalblue;
     border: .3rem dotted royalblue;
     color: royalblue;
 }
 
-.answer-prefix {
+.select-prefix {
     text-align: left;
     color: white;
     display: flex;
@@ -82,7 +82,7 @@ h2 {
 }
 
 
-.answer-text {
+.select-text {
     text-align: left;
     color: white;
     flex: auto;
