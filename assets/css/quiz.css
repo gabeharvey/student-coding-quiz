@@ -1,5 +1,5 @@
 :root {
-    background-color: azure;
+    background-color: white;
     font-size: 62.5%;
 }
 
@@ -22,14 +22,14 @@ nav {
 
 .btn {
     text-decoration: none;
-    text-shadow: 2px 2px 2px lightpink;
-    color: red;
+    text-shadow: 0px 5px 5px lightblue;
+    color: royalblue;
     font-weight: bold;
 }
 
 .btn:hover {
-    text-shadow: 2px 2px 3px red;
-    color: yellow;
+    text-shadow: 0px 5px 5px royalblue;
+    color: lightblue;
     text-decoration: none;
 }
 
@@ -48,43 +48,44 @@ h2 {
     justify-content: center;
     text-align: center;
     font-size: 3rem;
-    text-shadow: 5px 5px 5px lightpink;
-    color: red;
+    text-shadow: 0px 5px 5px lightblue;
+    color: royalblue;
     padding: 1rem;
 }
 
-ol {
+.answer-container {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
-    padding: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    width: 50rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border: .3rem dotted lightblue;
+    background-color: royalblue;
+    box-shadow: 0px 5px 5px lightblue;
 }
 
-ol li {
-    list-style: none!important;
-    padding: .5rem;
+.answer-container:hover {
+    background-color: lightblue;
+    box-shadow: 0px 5px 5px royalblue;
+    border: .3rem dotted royalblue;
+    color: royalblue;
 }
 
-.btn1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-decoration: none;
+.answer-prefix {
+    text-align: left;
+    color: white;
     display: flex;
-    justify-content: left;
-    text-align: center;
-    align-items: center;
-    width: 15rem;
-    background-color: red;
-    color: yellow;
-    box-shadow: 5px 5px 5px lightpink;
-    padding: 1rem;
-    font-size: 1.7rem;
-    margin: auto;
-    border: .3rem dotted yellow;
+    padding: 0.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.btn1:hover {
-    background-color: yellow;
-    box-shadow: 5px 5px 5px lightpink;
-    border: .3rem dotted red;
-    color: red;
+
+.answer-text {
+    text-align: left;
+    color: white;
+    flex: auto;
+    padding: 0.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
