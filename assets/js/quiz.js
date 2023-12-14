@@ -1,9 +1,10 @@
 const question = document.getElementById("question");
 const select = Array.from(document.getElementsByClassName("select-text"));
 const MAX_QUESTIONS = 5;
+const INCORRECT_DED = 10;
 
 let currentQuestion = {}
-let acceptingAnswers = true;
+let acceptAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -51,3 +52,39 @@ let questions = [
     },
 
 ]
+
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [... questions];
+    console.log(availableQuestions);
+    getNewQuestion();
+};
+
+getNewQuestion = () => {
+    if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
+        return window.location.assign("/end.html");
+    }
+    questionCounter++;
+    const questionPool = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionPool];
+    question.innerText = currentQuestion.question;
+    select.forEach(select => {
+        const number = select.dataset["number"];
+        select.innerText = currentQuestion["select" + number];
+    });
+    availableQuestions.splice(questionPool, 1);
+    acceptAnswers = true;
+};
+
+select.forEach(select => {
+    select.addEventListener("click", e => {
+        if(!acceptAnswers) return;
+        acceptAnswers = false;
+        const selectedSelect = e.target;
+        const selectedAnswer = selectedSelect.dataset["number"];
+        getNewQuestion();
+    });
+})
+
+startGame();
