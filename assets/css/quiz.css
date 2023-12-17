@@ -89,3 +89,11 @@ h2 {
     padding: 0.3rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}

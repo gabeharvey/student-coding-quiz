@@ -8,6 +8,7 @@ let acceptAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
+var pointsEl = document.getElementById('countdown');
 
 let questions = [
     {
@@ -63,7 +64,7 @@ startGame = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
-        return window.location.assign("/end.html");
+        return window.location.assign("/gameover.html");
     }
     questionCounter++;
     const questionPool = Math.floor(Math.random() * availableQuestions.length);
@@ -83,8 +84,28 @@ select.forEach(select => {
         acceptAnswers = false;
         const selectedSelect = e.target;
         const selectedAnswer = selectedSelect.dataset["number"];
-        getNewQuestion();
+        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+        selectedSelect.parentElement.classList.add(classToApply);
+        setTimeout(() => {
+            selectedSelect.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);       
     });
-})
+});
 
 startGame();
+
+function countdown() {
+    var points = 75;
+    var timeInterval = setInterval(function () {
+      if (points > 0) {
+        pointsEl.textContent = points + ' POINTS';
+        points--;
+      } else {
+        pointsEl.textContent = 'GAME OVER';
+        clearInterval(timeInterval);
+      }
+    }, 1000);
+  };
+
+  countdown();
