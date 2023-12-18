@@ -26,6 +26,20 @@ nav {
     font-weight: bold;
 }
 
+span {
+    text-decoration: none;
+    text-shadow: 0px 5px 5px lightblue;
+    color: royalblue;
+    font-weight: bold;
+}
+
+#myScore {
+    text-decoration: none;
+    text-shadow: 0px 5px 5px lightblue;
+    color: royalblue;
+    font-weight: bold;
+}
+
 .btn:hover {
     text-shadow: 0px 5px 5px royalblue;
     color: lightblue;

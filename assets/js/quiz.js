@@ -1,8 +1,10 @@
 const question = document.getElementById("question");
 const finalScore = document.getElementById("countdown");
 const select = Array.from(document.getElementsByClassName("select-text"));
-const MAX_QUESTIONS = 5;
-const INCORRECT_DED = -10;
+const maximumQuestions = 5;
+const answerCorrect = 1;
+const answerIncorrect = -10;
+const myScoreText = document.getElementById("myScore");
 
 let currentQuestion = {}
 let acceptAnswers = false;
@@ -64,7 +66,7 @@ startGame = () => {
 };
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
+    if(availableQuestions.length === 0 || questionCounter >= maximumQuestions){
         localStorage.setItem("mostRecentPoints", pointsEl.value);
         return window.location.assign("./final.html");
     }
@@ -87,6 +89,9 @@ select.forEach(select => {
         const selectedSelect = e.target;
         const selectedAnswer = selectedSelect.dataset["number"];
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+        if(classToApply === "correct") {
+            incrementMyScore(answerCorrect);
+        }
         selectedSelect.parentElement.classList.add(classToApply);
         setTimeout(() => {
             selectedSelect.parentElement.classList.remove(classToApply);
@@ -101,7 +106,7 @@ function countdown() {
     let points = 75;
     let timeInterval = setInterval(function () {
       if (points > 0) {
-        pointsEl.textContent = points + ' POINTS';
+        pointsEl.textContent = points + ' Seconds Left';
         points--;
       } else {
         pointsEl.textContent = 'GAME OVER';
@@ -109,5 +114,10 @@ function countdown() {
       }
     }, 1000);
   };
+
+incrementMyScore = num => {
+    score +=num;
+    myScoreText.innerText = score;
+}
 
 countdown();
