@@ -1,3 +1,4 @@
+// primary variable declarations
 const question = document.getElementById("question");
 const finalScore = document.getElementById("countdown");
 const select = Array.from(document.getElementsByClassName("select-text"));
@@ -13,6 +14,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 let pointsEl = document.getElementById('countdown');
 
+// series of questions presented in main area of quiz along with correct answers
 let questions = [
     {
         question: "Commonly used data types DO NOT Include:",
@@ -57,6 +59,7 @@ let questions = [
 
 ]
 
+// function begins quiz
 startGame = () => {
     questionCounter = 0;
     score = 0;
@@ -65,6 +68,7 @@ startGame = () => {
     getNewQuestion();
 };
 
+// question randomizer and question pool handling
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= maximumQuestions){
         localStorage.setItem("mostRecentPoints", score);
@@ -82,6 +86,7 @@ getNewQuestion = () => {
     acceptAnswers = true;
 };
 
+// validates questions and awards points for questions answered correctly
 select.forEach(select => {
     select.addEventListener("click", e => {
         if(!acceptAnswers) return;
@@ -102,6 +107,7 @@ select.forEach(select => {
 
 startGame();
 
+// timer countdown for quiz flashes game over when time expires
 function countdown() {
     let points = 75;
     let timeInterval = setInterval(function () {

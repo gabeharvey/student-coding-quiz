@@ -1,3 +1,4 @@
+/* styling of primary area of page */
 :root {
     background-color: white;
     font-size: 62.5%;
@@ -11,6 +12,7 @@
     color: black;
 }
 
+/* styling of buttons at top of page */
 nav {
     display: flex;
     justify-content: space-between;
@@ -26,6 +28,13 @@ nav {
     font-weight: bold;
 }
 
+.btn:hover {
+    text-shadow: 0px 5px 5px royalblue;
+    color: lightblue;
+    text-decoration: none;
+}
+
+/* myscore notations styling */
 span {
     text-decoration: none;
     text-shadow: 0px 5px 5px lightblue;
@@ -40,12 +49,7 @@ span {
     font-weight: bold;
 }
 
-.btn:hover {
-    text-shadow: 0px 5px 5px royalblue;
-    color: lightblue;
-    text-decoration: none;
-}
-
+/* main area of webpage styling */
 .container {
     width: 100vw;
     height: 50vh;
@@ -83,6 +87,7 @@ h2 {
     cursor: pointer;
 }
 
+/* styling of words inside selection boxes */
 .select-prefix {
     text-align: left;
     color: white;
@@ -100,6 +105,7 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* box flash colors for correct and incorrect answers */
 .correct {
     background-color: green;
 }

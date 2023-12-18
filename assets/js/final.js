@@ -1,3 +1,4 @@
+// primary variable declarations
 const username = document.getElementById("username");
 const saveFinalPoints = document.getElementById("savePointsBtn");
 const finalPoints = document.getElementById("finalPoints");
@@ -7,10 +8,13 @@ const maximumHighScores = 3;
 
 finalPoints.innerText = mostRecentPoints;
 
+// prohibts entry of invalid initials entry
 username.addEventListener("keyup", () => {
     savePointsBtn.disabled = !username.value;
 });
 
+// allows score to be entered into local storage
+// top 3 scores are saved for viewing on high scores page
 saveHighScore = e => {
     e.preventDefault();
     const points = {

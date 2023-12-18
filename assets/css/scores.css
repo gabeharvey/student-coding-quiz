@@ -1,3 +1,4 @@
+/* primary styling of high scores page */
 :root {
     background-color: white;
     font-size: 62.5%;
@@ -11,6 +12,7 @@
     color: black;
 }
 
+/* styling and positioning high scores items */
 .container {
     width: 100vw;
     height: 50vh;
@@ -21,6 +23,7 @@
     margin: 0 auto;
 }
 
+/* styling and positioning of high scores banner */
 #finalScore {
     display: flex;
     justify-content: center;
@@ -31,6 +34,7 @@
     padding: 1rem;
 }
 
+/* styling and positioning of actual high scores */
 ul {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: large;
@@ -45,6 +49,7 @@ ul {
     list-style-type: none;
 }
 
+/* styling and positioning of link to exit high scores page */
 .btn {
     display: flex;
     align-items: center;

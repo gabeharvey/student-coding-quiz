@@ -1,3 +1,4 @@
+/* primary styling of webpage */
 :root {
     background-color: white;
     font-size: 62.5%;
@@ -11,6 +12,7 @@
     color: black;
 }
 
+/* styling of page contents */
 .container {
     width: 100vw;
     height: 50vh;
@@ -21,6 +23,7 @@
     margin: 0 auto;
 }
 
+/* styling of initials box */
 #username {
     margin-bottom: 1rem;
     width: 20rem;
@@ -31,6 +34,7 @@
     box-shadow: 0px 5px 5px lightblue;
 }
 
+/* font styling and positioning of main header */
 h1 {
     display: flex;
     justify-content: center;
@@ -41,6 +45,7 @@ h1 {
     padding: 1rem;
 }
 
+/* styling and positiioning of main boxes */
 ul {
     display: flex;
     justify-content: center;
@@ -51,6 +56,7 @@ ul {
     padding: 1rem;
 }
 
+/* styling and positioning of score achieved by user */
 h2 {
     display: flex;
     justify-content: center;
@@ -61,6 +67,7 @@ h2 {
     padding: 1rem;
 }
 
+/* styling and positioning of Points wording */
 span {
     display: flex;
     justify-content: center;
@@ -76,6 +83,7 @@ span {
     justify-content: center;
 }
 
+/* positioning of username box */
 #username {
     display: flex;
     align-items: center;
@@ -84,6 +92,7 @@ span {
     margin-bottom: 1rem;
 }
 
+/* styling of main buttons and links on final score page */
 .btn {
     display: flex;
     align-items: center;
