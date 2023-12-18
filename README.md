@@ -18,23 +18,32 @@ Student Coding Quiz done in collaboration with coding students Kalyn Sifuentes, 
 Additional support and guidance provided by tutor Trinh Nguyen.
 
 Following YouTube videos accessed for guidance on JavaScript, HTML, and CSS -
+
 Home Page Guidance:
     https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=1
+
 Game Page Structure Guidance:
     https://www.youtube.com/watch?v=IK257Ln0MZc&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=2
+
 Questions Display Guidance:
     https://www.youtube.com/watch?v=zZdQGs62cR8&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=3
+
 Verify Questions Guidance:
     https://www.youtube.com/watch?v=_LYxkClHnV0&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=4
+
 Score Display Guidance:
     https://www.youtube.com/watch?v=BOQLbu_Crc0&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=5
+
 Final Page Guidance:
     https://www.youtube.com/watch?v=o3MF_JmQxYg&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=7
+
 Local Storage Functionality Guidance:
     https://www.youtube.com/watch?v=DFhmNLKwwGw&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=8
+
 High Scores Page Guidance:
     https://www.youtube.com/watch?v=jfOv18lCMmw&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF&index=9
-Author: James Q Quick
+
+YouTube Videos Creator: James Q Quick
 
 ## Screenshot
 
