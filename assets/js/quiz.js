@@ -65,6 +65,7 @@ startGame = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
+        localStorage.setItem("mostRecentPoints", pointsEl.value);
         return window.location.assign("./final.html");
     }
     questionCounter++;
