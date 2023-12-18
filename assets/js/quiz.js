@@ -1,14 +1,15 @@
 const question = document.getElementById("question");
+const finalScore = document.getElementById("countdown");
 const select = Array.from(document.getElementsByClassName("select-text"));
 const MAX_QUESTIONS = 5;
-const INCORRECT_DED = 10;
+const INCORRECT_DED = -10;
 
 let currentQuestion = {}
 let acceptAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-var pointsEl = document.getElementById('countdown');
+let pointsEl = document.getElementById('countdown');
 
 let questions = [
     {
@@ -64,7 +65,7 @@ startGame = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
-        return window.location.assign("/gameover.html");
+        return window.location.assign("./gameover.html");
     }
     questionCounter++;
     const questionPool = Math.floor(Math.random() * availableQuestions.length);
@@ -96,8 +97,8 @@ select.forEach(select => {
 startGame();
 
 function countdown() {
-    var points = 75;
-    var timeInterval = setInterval(function () {
+    let points = 75;
+    let timeInterval = setInterval(function () {
       if (points > 0) {
         pointsEl.textContent = points + ' POINTS';
         points--;
@@ -108,4 +109,4 @@ function countdown() {
     }, 1000);
   };
 
-  countdown();
+countdown();
