@@ -4,7 +4,7 @@ const saveFinalPoints = document.getElementById("savePointsBtn");
 const finalPoints = document.getElementById("finalPoints");
 const mostRecentPoints = localStorage.getItem("mostRecentPoints");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-const maximumHighScores = 3;
+const maximumHighScores = 5;
 
 finalPoints.innerText = mostRecentPoints;
 
@@ -14,7 +14,7 @@ username.addEventListener("keyup", () => {
 });
 
 // allows score to be entered into local storage
-// top 3 scores are saved for viewing on high scores page
+// top 5 scores are saved for viewing on high scores page
 saveHighScore = e => {
     e.preventDefault();
     const points = {
@@ -23,7 +23,7 @@ saveHighScore = e => {
     };
     highScores.push(points);
     highScores.sort((a,b) => b.score - a.score);
-    highScores.splice(3);
+    highScores.splice(5);
     localStorage.setItem("highScores", JSON.stringify(highScores));
     window.location.assign("./index.html");
 };

@@ -115,7 +115,7 @@ function countdown() {
         pointsEl.textContent = points + ' Seconds Left';
         points--;
       } else {
-        pointsEl.textContent = 'GAME OVER';
+        pointsEl.textContent = '🚫🚫STOP🚫🚫 GAME OVER!';
         clearInterval(timeInterval);
       }
     }, 1000);
