@@ -65,7 +65,7 @@ startGame = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS){
-        return window.location.assign("./gameover.html");
+        return window.location.assign("./final.html");
     }
     questionCounter++;
     const questionPool = Math.floor(Math.random() * availableQuestions.length);
